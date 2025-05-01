@@ -632,7 +632,7 @@ def __setitem__(self, index, value):
                 # The data is copied from host to device automatically if needed
                 mf_arr[block_slices] = value3d[global_slices]
             else:
-                mf_arr[block_slices] = value
+                mf_arr[block_slices[0],block_slices[1],0,0] = value
 
 
 def register_MultiFab_extension(amr):
